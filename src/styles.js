@@ -19,5 +19,9 @@ export default makeStyles(()=> ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',    
+    },
+    card1: {
+        margin: '10px',
+        padding: '10px'
     }
 }))

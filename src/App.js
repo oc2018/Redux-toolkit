@@ -27,17 +27,19 @@ const App = () => {
         <div className={classes.body}>
         <Card className={classes.card}>
             <div className={classes.body}>
-
-            <h1>The count is: {count} </h1>
+            <h1>COUNTER</h1>
+            <h3>The count is: {count} </h3>
+            <Button className={classes.buttons} color='primary' fullWidth variant='outlined' onClick={() => dispatch(increment())}>increment BY 1</Button>
+            <Button className={classes.buttons} color='secondary' fullWidth variant='outlined' onClick={()=> dispatch(decrement())}>Decrement By 1</Button>
+            <Card className={classes.card1}>
+                <h3>Increment/Decrement By Value</h3>
             <form onSubmit={handleSubmit}>
-
             <TextField className={classes.textField} variant='outlined' fullWidth name='count' label='Enter The Value' value={postData.count} onChange={(e) =>setPostData(e.target.value)}  />
             <Button className={classes.buttons} variant='outlined' fullWidth type='submit' color='primary' onClick={()=> setIsIncrement(true)}>Increment by value</Button>
             <Button className={classes.buttons} variant='outlined' fullWidth type='submit' color='secondary' onClick={() => setIsIncrement(false)}>decrement by value</Button>
             
             </form>
-            <Button className={classes.buttons} color='primary' fullWidth variant='outlined' onClick={() => dispatch(increment())}>increment BY 1</Button>
-            <Button className={classes.buttons} color='secondary' fullWidth variant='outlined' onClick={()=> dispatch(decrement())}>Decrement By 1</Button>
+            </Card>
             </div>
         </Card>
         </div>
